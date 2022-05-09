@@ -68,12 +68,11 @@ public class Test {
                 }
                 catch (Exception classNameException) {
                     classNameException.printStackTrace();
+                }
 
-                    // Update student collection
-                    Student student = new Student(fistName, lastName, age, gender, className);
-                    studentsArr.add(student);
-                    }
-
+                // Update student collection
+                Student student = new Student(fistName, lastName, age, gender, className);
+                studentsArr.add(student);
             }
         } while (Student.numberOfStudents < 3);
 
