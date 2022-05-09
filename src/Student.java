@@ -2,7 +2,6 @@ public class Student {
 
     //COMPLETE THIS CLASS BEFORE MathStudent and ScienceStudent classes as they will be subclasses of Student class
 
-
     //HERE! Create a 5 args constructor
 
     public Student (String firstName, String lastName, int age, String gender, String className) {

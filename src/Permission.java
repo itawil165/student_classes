@@ -27,8 +27,8 @@ public class Permission {
     If the className is Math or Science, then it will do nothing
     */
 
-    public static void  checkClassName (String checkClassName) {
-        if (!checkClassName.toLowerCase().equals("math") || !checkClassName.toLowerCase().equals("science")) {
+    public static void checkClassName (String checkClassName) {
+        if (checkClassName.toLowerCase() != "math" || checkClassName.toLowerCase() != "science") {
             throw new RuntimeException(checkClassName + " is not an option!");
         }
     }

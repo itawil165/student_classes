@@ -32,7 +32,7 @@ public class Test {
 
         Scanner userInput = new Scanner(System.in);
 
-        ArrayList<Student> students = new ArrayList<>();
+        ArrayList<Student> studentsArr = new ArrayList<>();
 
         do {
             System.out.println(UserQuestions.askToJoin);
@@ -51,19 +51,33 @@ public class Test {
 
                 userInput.nextLine(); // reset input spacing
 
+                try {
+                    Permission.ageCheck(age);
+                }
+                catch (Exception ageException) {
+                    ageException.printStackTrace();
+                }
+
                 System.out.println(UserQuestions.askGender);
                 String gender = userInput.nextLine();
 
                 System.out.println(UserQuestions.askClassName);
                 String className = userInput.nextLine();
+                try {
+                    Permission.checkClassName(className);
+                }
+                catch (Exception classNameException) {
+                    classNameException.printStackTrace();
 
-                // Update student collection
-                Student student = new Student(fistName, lastName, age, gender, className);
-                students.add(student);
+                    // Update student collection
+                    Student student = new Student(fistName, lastName, age, gender, className);
+                    studentsArr.add(student);
+                    }
+
             }
         } while (Student.numberOfStudents < 3);
 
-        System.out.println(students);
+        System.out.println(studentsArr);
 
 
 
