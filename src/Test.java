@@ -1,6 +1,3 @@
-import oracle.jrockit.jfr.events.DataStructureDescriptor;
-
-import java.sql.Struct;
 import java.util.ArrayList;
 import java.util.Scanner;
 
